@@ -1,8 +1,11 @@
 require 'httparty'
 require 'json'
+require_relative 'roadmap'
 
 class Kele
+    include Roadmap
     include HTTParty
+
 
     def initialize(e, p)
         auth = { "email": e, "password": p }.to_json
