@@ -3,7 +3,7 @@ require 'json'
 require_relative 'roadmap'
 
 class Kele
-    extend Roadmap
+    include Roadmap
     include HTTParty
 
 
