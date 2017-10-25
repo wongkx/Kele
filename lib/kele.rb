@@ -42,6 +42,7 @@ class Kele
         }, headers: { "authorization" => @auth_token })
         @message = JSON.parse(response.body)
     end
+  
     def create_submission(assignment_branch, assignment_commit_link, checkpoint_id, comment, enrollment_id)
         url = "https://www.bloc.io/api/v1/checkpoint_submissions"
         response = self.class.post(url, body: {
